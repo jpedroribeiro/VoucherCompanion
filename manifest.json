@@ -1,0 +1,42 @@
+{
+  "manifest_version": 2,
+  
+  "name": "VoucherCompanion",
+  "description": "Hackathon Project",
+  "version": "1.0",
+  "author": "J. Pedro Ribeiro",
+  
+  "browser_action": {
+	"default_icon": "icons/found.png",
+	"default_title": "VoucherCompanion",
+	"default_popup": "popup/index.html"
+  },
+  
+  "content_scripts": [
+	{
+	  "js": [
+		"fetchMerchantInfo/index.js",
+		"injector/index.js"
+	  ],
+	  "matches": [
+		"http://www.asos.com/",
+		"http://www.debenhams.com/",
+		"http://www.marksandspencer.com/"
+	  ],
+	  "run_at": "document_idle"
+	}
+  ],
+  
+  "background": {
+	"scripts": [ "background/index.js" ]
+  },
+  
+  "icons": {
+	"128": "icons/found.png"
+  },
+  
+  "permissions": [
+	"activeTab"
+  ]
+  
+}

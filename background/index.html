@@ -1,0 +1,47 @@
+<style>
+	.voucher-companion-container {
+		font-family: sans-serif;
+		opacity: 0;
+		transition: all 0.5s;
+		position: absolute;
+		display: block;
+		top: 8px;
+		right: 8px;
+		width: 290px;
+		border: 5px solid #3fb342;
+		background: #f4f4f4;
+		z-index: 99999;
+		border-radius: 5px;
+		padding: 16px;
+		box-sizing: border-box;
+	}
+	
+	
+	.voucher-companion-container header {
+		font-size: 16px;
+		margin: 0 0 8px 0;
+	}
+	
+	.voucher-companion-container p {
+		font-size: 14px;
+		font-weight: bold;
+		margin: 0 0 8px 0;
+	}
+	
+	.voucher-companion-container a {
+		box-shadow: 0 2px 0 0 #3fb342, transparent 0 0 0;
+		display: block;
+		background-color: #67be3c;
+		padding: 4px;
+		border-radius: 3px;
+		text-decoration: none;
+		color: white;
+		font-size: 14px;
+		text-align: center;
+	}
+</style>
+<div class="voucher-companion-container">
+	<header>I've found <strong>1 offer</strong> for __MERCHANT_NAME</header>
+	<p>__OFFER</p>
+	<a href="https://www.vouchercodes.co.uk/__MERCHANT_URL" target="_blank">Take me to the offer!</a>
+</div>

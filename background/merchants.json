@@ -1,0 +1,22 @@
+{
+  "Debenhans": {
+	"url": "debenhams.com",
+	"offers": [
+	  "10% off on all dresses",
+	  "2 for 1 on winter sale"
+	]
+  },
+  "Asos": {
+	"url": "asos.com",
+	"offers": [
+	  "£15 off on jeans"
+	]
+  },
+  "M&S": {
+	"url": "marksandspencer.com",
+	"offers": [
+	  "30% off on shirts and dresses",
+	  "50% Ski jaquets sale"
+	]
+  }
+}
