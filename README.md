@@ -1,10 +1,9 @@
-# VoucherCompanion
-
+# VoucherCompanion 🙍
 Proof of concept of a Chrome extension that detects (1) if the current merchant page has any offers on VoucherCodes.co.uk. 
 
-If **positive**, display the offer and a link to the site.
+If **positive** 🙋, display the offer and a link to the site.
 
-If **negative**, display a similar merchant offer and a link to the site.
+If **negative** 🤷‍♀️, display a similar merchant offer and a link to the site.
 
 (1) Currently parsing JSON (this is a hackathon project after all!), future iterations could use an API.
 
