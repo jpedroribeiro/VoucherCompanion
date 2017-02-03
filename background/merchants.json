@@ -1,5 +1,5 @@
 {
-  "Debenhans": {
+  "Debenhams": {
 	"url": "debenhams.com",
 	"offers": [
 	  "10% off on all dresses",
@@ -18,5 +18,10 @@
 	  "30% off on shirts and dresses",
 	  "50% Ski jaquets sale"
 	]
+  },
+  "Very.co.uk": {
+	"url": "very.co.uk",
+	"offers": [],
+	"similar": "Debenhams"
   }
 }

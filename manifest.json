@@ -21,7 +21,8 @@
 	  "matches": [
 		"http://www.asos.com/",
 		"http://www.debenhams.com/",
-		"http://www.marksandspencer.com/"
+		"http://www.marksandspencer.com/",
+		"http://www.very.co.uk/"
 	  ],
 	  "run_at": "document_idle"
 	}

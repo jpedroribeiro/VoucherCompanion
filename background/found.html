@@ -1,31 +1,39 @@
 <style>
 	.voucher-companion-container {
 		font-family: sans-serif;
+		-webkit-font-smoothing: auto;
 		opacity: 0;
+		transform: translateY(20px);
 		transition: all 0.5s;
 		position: absolute;
 		display: block;
 		top: 8px;
 		right: 8px;
 		width: 290px;
-		border: 5px solid #3fb342;
+		border: 4px solid #3fb342;
 		background: #f4f4f4;
 		z-index: 99999;
 		border-radius: 5px;
 		padding: 16px;
 		box-sizing: border-box;
+		box-shadow: 0 4px 11px rgba(0,0,0,0.25);
 	}
 	
 	
 	.voucher-companion-container header {
 		font-size: 16px;
-		margin: 0 0 8px 0;
+		margin: 0 0 16px 0;
+		font-weight: bold;
+		line-height: 20px;
 	}
 	
 	.voucher-companion-container p {
-		font-size: 14px;
+		font-size: 16px;
 		font-weight: bold;
-		margin: 0 0 8px 0;
+		margin: 0 0 16px 0;
+		border: 1px solid #eee;
+		background: white;
+		padding: 8px;
 	}
 	
 	.voucher-companion-container a {
@@ -36,11 +44,31 @@
 		border-radius: 3px;
 		text-decoration: none;
 		color: white;
-		font-size: 14px;
+		font-size: 16px;
 		text-align: center;
+		line-height: 40px;
+		font-weight: bold;
+		
+	}
+	
+	.voucher-companion-container button {
+		position: absolute;
+		top: -10px;
+		right: -10px;
+		border: none;
+		background: #3fb342;
+		border-radius: 50%;
+		text-align: center;
+		width: 35px;
+		height: 35px;
+		font-size: 27px;
+		text-indent: -1px;
+		line-height: 1px;
+		cursor: pointer;
 	}
 </style>
 <div class="voucher-companion-container">
+	<button onclick="document.querySelector('.voucher-companion-container').style.display = 'none'">🙋</button>
 	<header>I've found <strong>1 offer</strong> for __MERCHANT_NAME</header>
 	<p>__OFFER</p>
 	<a href="https://www.vouchercodes.co.uk/__MERCHANT_URL" target="_blank">Take me to the offer!</a>
