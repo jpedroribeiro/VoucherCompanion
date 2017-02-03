@@ -22,7 +22,6 @@ chrome.runtime.onMessage.addListener(function (msg, sender) {
 										.replace('__MERCHANT_NAME', match.name)
 										.replace('__NUMBER', match.offers.length)
 										.replace(new RegExp('__PLURAL', 'g'), match.offers.length > 1 ? 's' : '')
-										// .replace('__OFFER', match.offers[0])
 										.replace('__MERCHANT_URL', msg.merchant);
 						
 						for (offer of match.offers) {
@@ -39,7 +38,6 @@ chrome.runtime.onMessage.addListener(function (msg, sender) {
 				};
 				req.send(null);
 				
-				// Looks nice
 				chrome.browserAction.setBadgeText({
 					text:match.offers.length.toString(),
 					tabId: sender.tab.id
@@ -63,10 +61,6 @@ chrome.runtime.onMessage.addListener(function (msg, sender) {
 					}
 				};
 				req.send(null);
-				
-				// TODO this could be the number of offers (OR change the icon)
-				// chrome.browserAction.setBadgeBackgroundColor({color:[0, 0, 0]});
-				// chrome.browserAction.setBadgeText({text:"0"});
 			}
 		}
 	};

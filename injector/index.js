@@ -1,4 +1,3 @@
-// TODO decides first if it is a merchant page or not, then sends message
 chrome.runtime.sendMessage({
 	merchant: fetchLocation()
 });
@@ -7,13 +6,9 @@ chrome.runtime.sendMessage({
 chrome.runtime.onMessage.addListener(function(msg, sender, response){
 	document.querySelector('body').insertAdjacentHTML('beforeend', msg.markup);
 	
-	setTimeout(function(){
+	setTimeout(function(){ // Just to get the animation going
 		document.querySelector('.voucher-companion-container').style.opacity = 1;
 		document.querySelector('.voucher-companion-container').style.transform = 'initial';
 	}, 1000);
-	
-	
-	
-	
 	
 });

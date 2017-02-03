@@ -3,13 +3,62 @@
 <head lang="en">
 	<meta charset="UTF-8">
 	<title>VoucherCompanion Chrome Extension</title>
-	<link rel="stylesheet" href="index.css" type="text/css">
+	<style>
+		body {
+			width: 400px;
+		}
+		
+		.voucher-companion-container {
+			transition: all 0.5s;
+			border: 4px solid #3fb342;
+			background: #f4f4f4;
+			border-radius: 5px;
+			padding: 16px;
+			box-sizing: border-box;
+			box-shadow: 0 4px 11px rgba(0,0,0,0.25);
+		}
+		
+		
+		.voucher-companion-container header {
+			font-size: 16px;
+			margin: 0 0 16px 0;
+			font-weight: bold;
+			line-height: 20px;
+		}
+		
+		.voucher-companion-container p {
+			font-size: 16px;
+			font-weight: bold;
+			margin: 0 0 16px 0;
+			border: 1px solid #eee;
+			background: white;
+			padding: 8px;
+		}
+		
+		.voucher-companion-container a {
+			box-shadow: 0 2px 0 0 #3fb342, transparent 0 0 0;
+			display: block;
+			background-color: #67be3c;
+			padding: 4px;
+			border-radius: 3px;
+			text-decoration: none;
+			color: white;
+			font-size: 16px;
+			text-align: center;
+			line-height: 40px;
+			font-weight: bold;
+			outline: none;
+			
+		}
+	</style>
 </head>
 <body>
 
-
-<h1 class="js-merchant-name">Loading</h1>
-
+<div class="voucher-companion-container">
+	<header>Thanks for using VoucherCompanion</header>
+	<p id="content"></p>
+	<a href="https://www.vouchercodes.co.uk/" target="_blank">See all offers at VoucherCodes.co.uk</a>
+</div>
 
 <script src="index.js"></script>
 </body>
