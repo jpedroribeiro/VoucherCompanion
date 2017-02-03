@@ -16,10 +16,21 @@ chrome.runtime.onMessage.addListener(function (msg, sender) {
 				req.open("GET", chrome.extension.getURL('background/found.html'), true);
 				req.onreadystatechange = function() {
 					if (req.readyState == 4 && req.status == 200) {
-						var html = req.responseText
-							.replace('__MERCHANT_NAME', match.name)
-							.replace('__OFFER', match.offers[0])
-							.replace('__MERCHANT_URL', msg.merchant);
+						// Templating
+						var offers = '',
+							html = req.responseText
+										.replace('__MERCHANT_NAME', match.name)
+										.replace('__NUMBER', match.offers.length)
+										.replace(new RegExp('__PLURAL', 'g'), match.offers.length > 1 ? 's' : '')
+										// .replace('__OFFER', match.offers[0])
+										.replace('__MERCHANT_URL', msg.merchant);
+						
+						for (offer of match.offers) {
+							offers += '<p>' + offer + '</p>'
+						}
+						
+						html = html.replace('__OFFER', offers);
+						// end templating
 						
 						chrome.tabs.sendMessage(sender.tab.id, {
 							markup: html
@@ -28,9 +39,12 @@ chrome.runtime.onMessage.addListener(function (msg, sender) {
 				};
 				req.send(null);
 				
-				// TODO this could be the number of offers (OR change the icon)
-				// chrome.browserAction.setBadgeBackgroundColor({color:[0, 0, 0]});
-				// chrome.browserAction.setBadgeText({text:"0"});
+				// Looks nice
+				chrome.browserAction.setBadgeText({
+					text:match.offers.length.toString(),
+					tabId: sender.tab.id
+				});
+				
 			} else {
 				// Nothing found
 				var req = new XMLHttpRequest();
